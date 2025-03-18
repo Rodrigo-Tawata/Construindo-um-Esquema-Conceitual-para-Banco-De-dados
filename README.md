@@ -1,41 +1,46 @@
-# Construindo-um-Esquema-Conceitual-para-Banco-De-dados
+# 🚗 Construindo um Esquema Conceitual para Banco de Dados - Oficina Mecânica
 
-# Sistema de Controle de Ordens de Serviço - Oficina Mecânica
 
-## 🎯 Descrição do Projeto
-Este projeto consiste na modelagem conceitual e lógica de um sistema de controle e gerenciamento de ordens de serviço (OS) para uma oficina mecânica. O sistema abrange o controle de clientes, veículos, ordens de serviço, peças, serviços e equipes de mecânicos.
 
----
+## 📌 Descrição do Projeto
+Este projeto consiste no desenvolvimento de um esquema conceitual para um sistema de controle e gerenciamento de ordens de serviço em uma oficina mecânica. O objetivo é criar um banco de dados relacional que permita gerenciar clientes, veículos, ordens de serviço, peças, serviços, equipes e mecânicos de forma eficiente.
 
-## 📚 Entidades Principais
-- **Cliente:** Dados de identificação do cliente.
-- **Veículo:** Informações sobre o veículo do cliente.
-- **Ordem de Serviço (OS):** Detalha os serviços e peças associados a cada veículo.
-- **Serviço:** Catálogo de serviços disponíveis com valores de referência.
-- **Peça:** Itens que podem ser utilizados nos reparos.
-- **Equipe:** Conjunto de mecânicos designados a uma OS.
-- **Mecânico:** Dados de identificação e especialidade.
+O esquema foi modelado utilizando o MySQL Workbench e implementado no MySQL.
 
 ---
 
-## ⚙️ Como Executar o Projeto
-1. **Importe o modelo no MySQL Workbench:**  
-   Abra o arquivo `oficina.mwb` para visualizar e editar o modelo.
-
-2. **Crie o Banco de Dados:**  
-   Execute o script `schema.sql` em um servidor MySQL.
-
-3. **Visualize o Diagrama:**  
-   O arquivo `diagrama.png` apresenta o modelo visualmente.
-
+## 🛠️ Tecnologias Utilizadas
+- **MySQL Workbench:** Para modelagem do banco de dados.
+- **MySQL:** Sistema de gerenciamento de banco de dados relacional (SGBD).
+- **GitHub:** Repositório para controle de versão do projeto.
 ---
 
-## 🛠️ Considerações Técnicas
-- O modelo foi desenvolvido considerando as melhores práticas de modelagem relacional.  
-- Foram utilizadas tabelas de associação para representar relacionamentos muitos-para-muitos.  
-- A integridade referencial foi garantida por meio de chaves primárias e estrangeiras.
+## 📊 Modelo Conceitual
+Abaixo está o diagrama do esquema conceitual do banco de dados da oficina mecânica:
+
+
+O banco de dados foi estruturado com as seguintes entidades:
+
+- **Cliente:** Representa os clientes da oficina.
+- **Veículo:** Cada veículo pertence a um cliente.
+- **Ordem de Serviço (OS):** Cada ordem de serviço está vinculada a um veículo e a uma equipe de mecânicos.
+- **Equipe:** Agrupamento de mecânicos responsáveis pela execução das ordens de serviço.
+- **Mecânico:** Contém informações sobre cada mecânico e sua especialidade.
+- **Serviço:** Tipos de serviços oferecidos na oficina.
+- **Peça:** Peças utilizadas na execução dos serviços.
+- **Ordem de Serviço x Serviço:** Relaciona os serviços executados em cada OS.
+- **Ordem de Serviço x Peça:** Relaciona as peças utilizadas em cada OS.
 
 ---
 
 ## 🚀 Sobre o Autor
 Desenvolvido por Rodrigo Tawata. Projeto criado como parte de um desafio para aprimorar habilidades em modelagem de dados e bancos de dados relacionais.
+
+---
+
+📞 Contato
+Se tiver dúvidas, sugestões ou quiser contribuir, entre em contato:
+
+[GitHub](https://www.git-scm.com/doc)
+
+[LinkedIn](https://www.linkedin.com/in/rodrigo-tawata/)
